@@ -35,3 +35,8 @@ python3 /workspace/benchmark/scripts/tf_cnn_benchmarks/tf_cnn_benchmarks.py --mo
 ```
 python3 /workspace/benchmark/scripts/tf_cnn_benchmarks/tf_cnn_benchmarks.py --model=resnet50 --use_fp16 --xla_compile=True --num_gpus=1 --batch_size=32 --num_batches=200 --all_reduce_spec=nccl --model=resnet50 --variable_update=parameter_server
 ```
+
+# Credits
+
+The original repo is from Tensrflow benchmarks that can be found [here](https://github.com/tensorflow/benchmarks) 
+We have added integration for Nvidia Docker and add simple commands to follow for non-technical users so they can measure their GPUs performance.
