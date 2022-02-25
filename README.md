@@ -8,15 +8,14 @@
 
 Git clone this repo to the Workstation where you want to perform the tests.
 go to the directory where you cloned the repo and run the following command:
-```
+```bash
 sudo git clone https://github.com/Gimel-ai/benchmarks.git
 cd benchmarks
-sudo docker build -t benchmark2022
 sudo docker build . -t bizon/benchmark2022:v2.0
 ```
 
 Launch the container with the following command:
-```
+```bash
 sudo docker run --gpus all -v ~/docker_workspace:/workspace/work -it --shm-size=1g --ulimit memlock=-1  --ulimit stack=67108864 --rm b5cd6dc4522
 ```
 
