@@ -9,6 +9,8 @@
 Git clone this repo to the Workstation where you want to perform the tests.
 go to the directory where you cloned the repo and run the following command:
 ```
+sudo git clone https://github.com/Gimel-ai/benchmarks.git
+cd benchmarks
 sudo docker build -t benchmark2022
 sudo docker build . -t bizon/benchmark2022:v2.0
 ```
