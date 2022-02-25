@@ -1,5 +1,5 @@
 # Requirements
-- Ubuntu 18.04 or 20.04 
+- Ubuntu 18.04 or 20.04 (https://www.ubuntu.com/download/desktop)
 - Docker installed with Nvidia support (https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 - Nvidia drivers installed (https://docs.nvidia.com/en-us/drivers/installation/linux-nvidia-driver-installation) 
 
@@ -16,7 +16,7 @@ sudo docker build . -t bizon/benchmark2022:v2.0
 
 Launch the container with the following command:
 ```bash
-sudo docker run --gpus all -v ~/docker_workspace:/workspace/work -it --shm-size=1g --ulimit memlock=-1  --ulimit stack=67108864 --rm b5cd6dc4522
+sudo docker run --gpus all -v ~/docker_workspace:/workspace/work -it --shm-size=1g --ulimit memlock=-1  --ulimit stack=67108864 --rm bizon/benchmark2022:v2.0
 ```
 
 ## Once inside the container, you can run the benchmark with the following command:
