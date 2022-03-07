@@ -18,13 +18,12 @@ Launch the container with the following command:
 ```bash
 sudo docker run --gpus all -v ~/docker_workspace:/workspace/work -it --shm-size=1g --ulimit memlock=-1  --ulimit stack=67108864 --rm bizon/benchmark2022:v2.0
 ```
-<aside>
-💡 **Once inside the container, you can run the benchmark with the following command**
 
-</aside>
+👍 GREAT SUCCESS!
 
+`Once inside the container, you can run the benchmark with the following command`
 
-
+# Resnet 50
 
 ## FP32 - 200 epoch -batch size 32 Resnet50 
 ```
@@ -38,6 +37,8 @@ python3 /workspace/benchmark/scripts/tf_cnn_benchmarks/tf_cnn_benchmarks.py --mo
 ```
 python3 /workspace/benchmark/scripts/tf_cnn_benchmarks/tf_cnn_benchmarks.py --model=resnet50 --use_fp16 --xla_compile=True --num_gpus=1 --batch_size=32 --num_batches=200 --all_reduce_spec=nccl --model=resnet50 --variable_update=parameter_server
 ```
+
+
 
 # Credits
 
