@@ -18,8 +18,11 @@ Launch the container with the following command:
 ```bash
 sudo docker run --gpus all -v ~/docker_workspace:/workspace/work -it --shm-size=1g --ulimit memlock=-1  --ulimit stack=67108864 --rm bizon/benchmark2022:v2.0
 ```
+<aside>
+💡 **Once inside the container, you can run the benchmark with the following command**
 
-## Once inside the container, you can run the benchmark with the following command:
+</aside>
+
 
 
 
