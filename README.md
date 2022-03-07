@@ -25,17 +25,17 @@ sudo docker run --gpus all -v ~/docker_workspace:/workspace/work -it --shm-size=
 
 # Resnet 50
 
-## FP32 - 200 epoch -batch size 32 Resnet50 
+## FP32 - 200 epoch -batch size 64 Resnet50 
 ```
-python3 /workspace/benchmark/scripts/tf_cnn_benchmarks/tf_cnn_benchmarks.py --model=resnet50 --xla_compile=False --num_gpus=1 --batch_size=32 --num_batches=200 --all_reduce_spec=nccl --model=resnet50 --variable_update=parameter_server
+python3 /workspace/benchmark/scripts/tf_cnn_benchmarks/tf_cnn_benchmarks.py --model=resnet50 --xla_compile=False --num_gpus=1 --batch_size=64 --num_batches=200 --all_reduce_spec=nccl --model=resnet50 --variable_update=parameter_server
 ```
-## FP16 - 200 epoch -batch size 32 Resnet50
+## FP16 - 200 epoch -batch size 64 Resnet50
 ```
-python3 /workspace/benchmark/scripts/tf_cnn_benchmarks/tf_cnn_benchmarks.py --model=resnet50 --use_fp16 --xla_compile=False --num_gpus=1 --batch_size=32 --num_batches=200 --all_reduce_spec=nccl --model=resnet50 --variable_update=parameter_server
+python3 /workspace/benchmark/scripts/tf_cnn_benchmarks/tf_cnn_benchmarks.py --model=resnet50 --use_fp16 --xla_compile=False --num_gpus=1 --batch_size=64 --num_batches=200 --all_reduce_spec=nccl --model=resnet50 --variable_update=parameter_server
 ```
-## FP16_XLA - 200 epoch -batch size 32 Resnet50
+## FP16_XLA - 200 epoch -batch size 64 Resnet50
 ```
-python3 /workspace/benchmark/scripts/tf_cnn_benchmarks/tf_cnn_benchmarks.py --model=resnet50 --use_fp16 --xla_compile=True --num_gpus=1 --batch_size=32 --num_batches=200 --all_reduce_spec=nccl --model=resnet50 --variable_update=parameter_server
+python3 /workspace/benchmark/scripts/tf_cnn_benchmarks/tf_cnn_benchmarks.py --model=resnet50 --use_fp16 --xla_compile=True --num_gpus=1 --batch_size=64 --num_batches=200 --all_reduce_spec=nccl --model=resnet50 --variable_update=parameter_server
 ```
 
 
